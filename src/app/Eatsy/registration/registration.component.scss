@@ -1,0 +1,417 @@
+.main
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .block
+  {
+    margin-top: 30px;
+    width: 670px;
+    height: 645px;
+    background-color: #00ab59;
+    border-radius: 6%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    .container
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -35px;
+      .s
+      {
+        background-color: white;
+        width: 200px;
+        height: 35px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 10px;
+        .log
+        {
+          background-color: #00ab59;
+          width: 90px;
+          height: 25px;
+          border-radius: 30px;
+          text-align: center;
+        }
+        .log a
+        {
+          color: white;
+          font-size: 15px;
+        }
+        .sign
+        {
+          width: 90px;
+          height: 25px;
+          border-radius: 30px;
+          text-align: center;
+        }
+        .sign a
+        {
+          color: black;
+          font-size: 15px;
+        }
+      }
+    }
+    .container1
+    {
+      position: relative;
+      top: 30px;
+      height: 160px;
+      width: 380px;
+      .email
+      {
+        height: 50px;
+        width: 380px;
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      .email a
+      {
+        font-size: 20px;
+        color: #b3b3b3;
+        position: relative;
+        left: 20px;
+
+      }
+      .password
+      {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        height: 50px;
+        width: 380px;
+        background-color: white;
+        border-radius: 30px;
+        top: 30px;
+      }
+      .password a
+      {
+        font-size: 20px;
+        color: #b3b3b3;
+        position: relative;
+        left: 20px;
+      }
+    }
+    .wrapper-login{
+      background-color: white;
+      height: 30px;
+      width: 170px;
+      border-radius: 20px;
+      position: relative;
+      top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .login{
+        background-color: #00ab59;
+        height: 24px;
+        width: 164px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login a{
+        color: white;
+        font-size: 15px;
+      }
+    }
+    .enter
+    {
+      width: 485px;
+      height: 50px;
+      position: relative;
+      top: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .fb
+      {
+        width: 140px;
+        height: 50px;
+        background-color: white;
+        border-radius: 30px;
+        .img
+        {
+          height: 40px;
+          width: auto;
+          position: relative;
+          top: 5px;
+        }
+      }
+      .apple
+      {
+        width: 140px;
+        height: 50px;
+        background-color: white;
+        border-radius: 30px;
+        .img
+        {
+          height: 40px;
+          width: auto;
+          position: relative;
+          top: 5px;
+        }
+      }
+      .google
+      {
+        width: 140px;
+        height: 50px;
+        background-color: white;
+        border-radius: 30px;
+        .img
+        {
+          height: 40px;
+          width: auto;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+    .forgot
+    {
+      position: relative;
+      top: 90px;
+    }
+    .forgot u
+    {
+      font-size: 15px;
+      color: white;
+    }
+
+  }
+  .block img
+  {
+    position: relative;
+    top: 40px;
+    height: 80px;
+    width: auto;
+  }
+  .block p
+  {
+    color: white;
+    font-size: 40px;
+    margin-top: 60px;
+  }
+}
+
+
+
+// .main
+// {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   .block
+//   {
+//     margin-top: 30px;
+//     width: 670px;
+//     height: 645px;
+//     background-color: #00ab59;
+//     border-radius: 6%;
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: start;
+//     align-items: center;
+//     h1{
+//       color: white;
+//     }
+//     img{
+//       margin-top: 40px;
+//       height: 80px;
+//       width: auto;
+//     }
+//     .container
+//     {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       top: -35px;
+//       .s
+//       {
+//         background-color: white;
+//         width: 200px;
+//         height: 35px;
+//         border-radius: 30px;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding-left: 5px;
+//         padding-right: 10px;
+//         .log
+//         {
+//           background-color: #00ab59;
+//           width: 90px;
+//           height: 25px;
+//           border-radius: 30px;
+//           text-align: center;
+//         }
+//         .log a
+//         {
+//           color: white;
+//           font-size: 15px;
+//         }
+//         .sign
+//         {
+//           width: 90px;
+//           height: 25px;
+//           border-radius: 30px;
+//           text-align: center;
+//         }
+//         .sign a
+//         {
+//           color: black;
+//           font-size: 15px;
+//         }
+//       }
+//     }
+//     .container1
+//     {
+//       margin-top: 30px;
+//       height: 160px;
+//       width: 380px;
+//       .email
+//       {
+//         height: 50px;
+//         width: 380px;
+//         background-color: white;
+//         border-radius: 30px;
+//         display: flex;
+//         justify-content: start;
+//         align-items: center;
+//       }
+//       .email a
+//       {
+//         font-size: 20px;
+//         color: #b3b3b3;
+//         left: 20px;
+
+//       }
+//       .password
+//       {
+//         display: flex;
+//         justify-content: start;
+//         align-items: center;
+//         height: 50px;
+//         width: 380px;
+//         background-color: white;
+//         border-radius: 30px;
+//         margin-top: 30px;
+//       }
+//       .password a
+//       {
+//         font-size: 20px;
+//         color: #b3b3b3;
+//         left: 20px;
+//       }
+//     }
+//     .wrapper-login{
+//       background-color: white;
+//       height: 30px;
+//       width: 170px;
+//       border-radius: 20px;
+//       margin-top: 10px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+
+//       .login{
+//         background-color: #00ab59;
+//         height: 24px;
+//         width: 164px;
+//         border-radius: 20px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//       }
+//       .login a{
+//         color: white;
+//         font-size: 15px;
+//       }
+//     }
+//     .enter
+//     {
+//       width: 485px;
+//       height: 50px;
+//       margin-top: 40px;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       .fb
+//       {
+//         width: 140px;
+//         height: 50px;
+//         background-color: white;
+//         border-radius: 30px;
+//         .img
+//         {
+//           height: 40px;
+//           width: auto;
+//           margin-top: 5px;
+//         }
+//       }
+//       .apple
+//       {
+//         width: 140px;
+//         height: 50px;
+//         background-color: white;
+//         border-radius: 30px;
+//         .img
+//         {
+//           height: 40px;
+//           width: auto;
+//           margin-top: 5px;
+//         }
+//       }
+//       .google
+//       {
+//         width: 140px;
+//         height: 50px;
+//         background-color: white;
+//         border-radius: 30px;
+//         .img
+//         {
+//           height: 40px;
+//           width: auto;
+//           margin-top: 5px;
+//         }
+//       }
+//     }
+//     .forgot
+//     {
+//       margin-top: 50px;
+//     }
+//     .forgot u
+//     {
+//       font-size: 15px;
+//       color: white;
+//     }
+
+//   }
+//   // .block img
+//   // {
+//   //   position: relative;
+//   //   top: 40px;
+//   //   height: 80px;
+//   //   width: auto;
+//   // }
+//   // .block h3
+//   // {
+//   //   color: white;
+//   //   margin-top: 60px;
+//   // }
+// }

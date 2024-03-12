@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
-  styleUrl: './registration.component.css'
+  styleUrl: './registration.component.scss'
 })
 export class RegistrationComponent {
 
