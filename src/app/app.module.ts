@@ -11,14 +11,14 @@ import { LoginComponent } from './Eatsy/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent,
     ForgotPasswordComponent,
     LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    RegistrationComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
