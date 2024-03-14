@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './Eatsy/registration/registration.component';
 import {NgOptimizedImage} from "@angular/common";
+import { ForgotPasswordComponent } from './Eatsy/forgot-password/forgot-password.component';
+import { LoginComponent } from './Eatsy/login/login.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    RegistrationComponent,
+    ReactiveFormsModule,
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

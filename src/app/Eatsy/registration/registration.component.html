@@ -1,5 +1,40 @@
-
 <div class="main">
+  <div class="block">
+    <img class="img" src="assets/logo.png">
+    <p>Welcome to Eatsy!</p>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="signup" checked>
+        <input type="radio" name="slide" id="login">
+        <label for="signup" class="slide signup">Sign up</label>
+        <label for="login" class="slide login">Log in</label>
+        <div class="slider-tab"></div>
+      </div>
+    </div>
+    <form  class="container">
+      <div class="data">
+        <input class="input-data" type="text" placeholder="Nickname">
+        <span class="requir">*Nickname is required</span>
+      </div>
+      <div class="data">
+        <input class="input-data" type="text" placeholder="Email">
+        <span class="requir">*Email is required</span>
+      </div>
+      <div class="data">
+        <input class="input-data" type="text" placeholder="Password">
+        <span class="requir">*Password is required</span>
+      </div>
+      <button class="submit">Submit</button>
+    </form>
+    <div class="enter">
+      <button class="icons"><img class="img" src="assets/fb.png"></button>
+      <button class="icons"><img class="img" src="assets/apple.png"></button>
+      <button class="icons"><img class="img" src="assets/google.png"></button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="main">
   <div class="block">
     <img class="img" src="assets/logo.png">
     <p>Welcome to Eatsy!</p>
@@ -38,9 +73,9 @@
       </div>
     </div>
     <div class="forgot">
-      <u>Forgot password?</u>
+      <a routerLink="/forgot-password">Forgot password?</a>
     </div>
-  </div>
+  </div> -->
 <!--  <div class="container">-->
 <!--    <h2>User Registration</h2>-->
 <!--    <div class="container">-->
@@ -65,4 +100,4 @@
 <!--      </form>-->
 <!--    </div>-->
 <!--  </div>-->
-</div>
+<!-- </div> -->
