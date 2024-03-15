@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
   .block {
   margin-top: 30px;
   width: 670px;
@@ -102,16 +106,24 @@
       height: 250px;
       width: 390px;
       .data{
+<<<<<<< HEAD
         position: relative;
         top: 6px;
+=======
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
         border-radius: 50px;
         justify-content: start;
         align-items: center;
         .input-data{
           margin: 8px 0 1px 0;
+<<<<<<< HEAD
           height: 40px;
           width: 380px;
           font-size: 20px;
+=======
+          height: 30px;
+          width: 380px;
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
           background-color: white;
           border: 2px solid white;
           border-radius: 50px;
@@ -122,7 +134,11 @@
         }
       }
       .submit{
+<<<<<<< HEAD
         top: 20px;
+=======
+        top: 30px;
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
         position: relative;
         height: 30px;
         width:140px;
@@ -137,11 +153,19 @@
       width: 485px;
       height: 45px;
       position: relative;
+<<<<<<< HEAD
       top: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
+=======
+      top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
       .icons
       {
         padding: 2px;
@@ -152,6 +176,7 @@
         border: 1px solid white;
         .img
         {
+<<<<<<< HEAD
           height: 40px;
           width: auto;
           position: relative;
@@ -159,6 +184,15 @@
         }
       }
 
+=======
+          height: 30px;
+          width: auto;
+          position: relative;
+          top: 5px;
+        }
+      }
+      
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
     }
   }
 }
@@ -595,4 +629,8 @@
 //   //   color: white;
 //   //   margin-top: 60px;
 //   // }
+<<<<<<< HEAD
 // }
+=======
+// }
+>>>>>>> 84d9459f692b5dc1e632cb4e31d9bceb4b27ed27
