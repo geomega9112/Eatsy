@@ -8,11 +8,13 @@ import {NgOptimizedImage} from "@angular/common";
 import { ForgotPasswordComponent } from './Eatsy/forgot-password/forgot-password.component';
 import { LoginComponent } from './Eatsy/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ForgotPasswordComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
