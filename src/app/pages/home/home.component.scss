@@ -7,6 +7,7 @@
     position: fixed;
     height: 100%;
     width: 90px;
+    position: fixed;
     background-color: #016334;
     display: flex;
     justify-content: start;
@@ -53,7 +54,90 @@
   }
   .menu
   {
+    position: fixed;
     width: 100%;
-    height: 40px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .block
+    {
+      width: 350px;
+      height: 50px;
+      position: relative;
+      left: 120px;
+      background-color: #016334;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      .search
+      {
+        position: relative;
+        left: 10px;
+        height: 30px;
+        width: 290px;
+        padding: 7px;
+        border-radius: 40px;
+      }
+      .find
+      {
+        height: 30px;
+        position: relative;
+        left: 15px;
+        width: 30px;
+        .photo
+        {
+          height: 30px;
+          width: auto;
+        }
+      }
+
+    }
+    .container {
+      display: flex;
+      width: 200px;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 5px;
+      .upgrade {
+        height: 40px;
+        width: 120px;
+        background-color: #016334;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+
+      }
+
+      .upgrade a {
+        color: white;
+        font-size: 20px;
+      }
+
+      .user {
+        height: 50px;
+        width: 50px;
+        background-color: #016334;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .us {
+          height: 45px;
+          width: 45px;
+        }
+      }
+    }
+  }
+  .list
+  {
+    height: 50px;
+    width: 175px;
+    background-color: #016334;
   }
 }
