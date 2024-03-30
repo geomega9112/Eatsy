@@ -52,8 +52,8 @@
     height: 30px;
     width: 30px;
   }
-  .menu
-  {
+    .menu
+   {
     position: fixed;
     width: 100%;
     height: 60px;
@@ -134,10 +134,72 @@
       }
     }
   }
-  .list
-  {
-    height: 50px;
-    width: 175px;
-    background-color: #016334;
-  }
+     .form-controls
+    {
+    height: 70px;
+    width: 250px;
+    position: relative;
+       top: 90px;
+       left: 120px;
+       .slide-controls {
+         position: relative;
+         display: flex;
+         background-color: #016334;
+         width: 250px;
+         border-radius: 30px;
+         overflow: hidden;
+         text-align: center;
+         justify-content: space-between;
+         align-items: center;
+         border: 4px solid #016334;
+         .slide {
+           height: 100%;
+           width: 100%;
+           color: #fff;
+           font-size: 18px;
+           font-weight: 500;
+           line-height: 48px;
+           cursor: pointer;
+           z-index: 1;
+           transition: all 0.6s ease;
+         }
+         label.map {
+           color: #000;
+         }
+         .slider-tab {
+           position: absolute;
+           height: 100%;
+           width: 50%;
+           left: 0;
+           z-index: 0;
+           border-radius: 30px;
+           background-color: #ffffff;
+           // background: -webkit-linear-gradient(left, #00ab59, #03c567, #09e77b, #12f688);
+           transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+           align-items: center;
+         }
+         input[type="radio"] {
+           display: none;
+         }
+         #map:checked ~ .slider-tab {
+           left: 50%;
+         }
+         #map:checked ~ label.map {
+           color: #fff;
+           cursor: default;
+           user-select: none;
+         }
+         #map:checked ~ label.list {
+           color: #000;
+         }
+         #list:checked ~ label.map {
+           color: #000;
+         }
+         #list:checked ~ label.list {
+           cursor: default;
+           user-select: none;
+         }
+       }
+    }
+
 }
