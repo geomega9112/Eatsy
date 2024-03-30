@@ -4,37 +4,41 @@
     <p>Welcome to Eatsy!</p>
     <div class="form-container">
       <div class="slide-controls">
-        <input routerLink="/registration" type="radio" name="slide" id="signup">
+        <input type="radio" name="slide" id="signup">
         <input type="radio" name="slide" id="login" checked>
         <label for="signup" class="slide signup" (click)="toggleLoginView()">Sign up</label>
         <label for="login" class="slide login" (click)="toggleLoginView()">Log in</label>
         <div class="slider-tab"></div>
       </div>
     </div>
-    <form  class="container">
+    <form [formGroup]="loginForm" class="container">
       <div class="data">
         <input formControlName="email" class="input-data" type="text" placeholder="Email">
-        <span *ngIf="loginForm.hasError('email', 'required') && loginForm.controls['email'].dirty" class="requir">*Email is required</span>
+        <span *ngIf="loginForm.hasError('required', 'email') && loginForm.controls['email'].dirty" class="requir">*Email is required</span>
       </div>
       <div class="data1">
         <input formControlName="password" class="input-data" type="text" placeholder="Password">
-        <span *ngIf="loginForm.hasError('password', 'required') && loginForm.controls['password'].dirty" class="requir">*Password is required</span>
+        <span *ngIf="loginForm.hasError('required', 'password') && loginForm.controls['password'].dirty" class="requir">*Password is required</span>
       </div>
-      <div *ngIf="!isLogin" class="data1">
-        <input formControlName="с" class="input-data" type="text" placeholder="Password">
-        <span *ngIf="loginForm.hasError('password', 'required') && loginForm.controls['password'].dirty" class="requir">*Password is required</span>
+      <div *ngIf="!isLogin" class="data2">
+        <input formControlName="nickname" class="input-data" type="text" placeholder="Nickname">
+        <span *ngIf="loginForm.hasError('required', 'nickname') && loginForm.controls['nickname'].dirty" class="requir">*Nickname is required</span>
       </div>
-      <button [disabled]="loginForm.invalid" [class.disadled]="loginForm" (click)="login()" class="log-in">Log in</button>
+      <button (click)="login()" class="log-in">{{isLogin ? 'Log in' : 'Sign Up'}}</button>
     </form>
-    <div class="enter">
+    <div *ngIf="isLogin" class="enter">
       <button class="icons"><img class="img" src="assets/fb.png"></button>
       <button class="icons"><img class="img" src="assets/apple.png"></button>
       <button class="icons"><img class="img" src="assets/google.png"></button>
     </div>
-        <div class="forgot">
-          <a routerLink="/forgot-password">Forgot password?</a>
-        </div>
+    <div *ngIf="!isLogin" class="enter1">
+      <button class="icons"><img class="img" src="assets/fb.png"></button>
+      <button class="icons"><img class="img" src="assets/apple.png"></button>
+      <button class="icons"><img class="img" src="assets/google.png"></button>
+    </div>
+    <div *ngIf="isLogin" class="forgot">
+      <a routerLink="/forgot-password">Forgot password?</a>
+    </div>
   </div>
 </div>
 
-{{isLogin ? 'Log in' : 'Sign Up'}}

@@ -13,11 +13,16 @@ import {RouterModule} from "@angular/router";
 export class LoginComponent implements OnInit {
   fb = inject(FormBuilder);
   loginForm !: FormGroup;
+  isLogin: boolean = true; constructor() {}
 
+  toggleLoginView() {
+    this.isLogin = !this.isLogin;
+  }
   ngOnInit(): void {
     this.loginForm=this.fb.group({
       email:['',Validators.compose([Validators.required, Validators.email])],
       password:['',Validators.required],
+      nickname:['',Validators.required]
     });
   }
   login()
@@ -25,3 +30,5 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
   }
 }
+
+

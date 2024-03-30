@@ -41,7 +41,6 @@
       display: flex;
       background-color: white;
       width: 250px;
-      height: 45px;
       border-radius: 30px;
       overflow: hidden;
       text-align: center;
@@ -98,43 +97,21 @@
     }
     .container{
       position: relative;
-      top: 20px;
       height: 250px;
       width: 390px;
+      justify-content: start;
+      padding-top: 20px;
       .data{
         position: relative;
-        top: 20px;
+        padding: 10px 0;
         border-radius: 50px;
         justify-content: start;
         align-items: center;
         .input-data{
-          margin: 8px 0 1px 0;
-          height: 40px;
-          width: 380px;
-          font-size: 20px;
-          background-color: white;
-          border: 2px solid white;
-          border-radius: 50px;
-          justify-content: start;
-        }
-
-        }
-        .requir{
-          color:red;
-        }
-      .data1
-      {
-        position: relative;
-        top: 20px;
-        border-radius: 50px;
-        justify-content: start;
-        align-items: center;
-        .input-data{
-          margin: 8px 0 1px 0;
+          padding-left: 20px;
           height: 40px;
           width: 380px;
           position: relative;
-          top: 20px;
           font-size: 20px;
           background-color: white;
           border: 2px solid white;
@@ -143,12 +120,68 @@
         }
         .requir{
           color:red;
+          position: absolute;
+          display: inline-block;
+          right: 30px;
+          line-height: 40px;
+        }
+      }
+      .data1
+      {
+        position: relative;
+        padding: 15px 0;
+        border-radius: 50px;
+        justify-content: start;
+        align-items: center;
+        .input-data{
+          padding-left: 20px;
+          height: 40px;
+          width: 380px;
+          position: relative;
+          font-size: 20px;
+          background-color: white;
+          border: 2px solid white;
+          border-radius: 50px;
+          justify-content: start;
+        }
+        .requir{
+          color:red;
+          position: absolute;
+          display: inline-block;
+          right: 30px;
+          line-height: 40px;
+        }
+      }
+      .data2
+      {
+        position: relative;
+        border-radius: 50px;
+        justify-content: start;
+        padding: 15px 0;
+        align-items: center;
+        .input-data{
+          padding-left: 20px;
+          height: 40px;
+          width: 380px;
+          position: relative;
+          font-size: 20px;
+          background-color: white;
+          border: 2px solid white;
+          border-radius: 50px;
+          justify-content: start;
+        }
+        .requir{
+          color:red;
+          position: absolute;
+          display: inline-block;
+          right: 30px;
+          line-height: 40px;
         }
       }
       .log-in{
-        top: 80px;
         position: relative;
         width:140px;
+        margin-top: 20px;
         color: white;
         border:3px solid white;
         background-color: #016334;
@@ -156,85 +189,38 @@
         font-size: 20px;
       }
     }
-    .container1
-    {
-      position: relative;
-      top: 20px;
-      height: 250px;
-      width: 390px;
-      .data{
-        position: relative;
-        top: 10px;
-        border-radius: 50px;
-        justify-content: start;
-        align-items: center;
-        .input-data{
-          margin: 8px 0 1px 0;
-          height: 50px;
-          width: 380px;
-          font-size: 20px;
-          background-color: white;
-          border: 2px solid white;
-          border-radius: 50px;
-          justify-content: start;
-        }
 
-      }
-      .requir{
-        color:red;
-      }
-      .data1
-      {
-        position: relative;
-        top: 20px;
-        border-radius: 50px;
-        justify-content: start;
-        align-items: center;
-        .input-data{
-          margin: 8px 0 1px 0;
-          height: 50px;
-          width: 380px;
-          position: relative;
-          top: 10px;
-          font-size: 20px;
-          background-color: white;
-          border: 2px solid white;
-          border-radius: 50px;
-          justify-content: start;
-        }
-        .requir{
-          color:red;
-        }
-      }
-      .data2
-      {
-        position: relative;
-        top: 20px;
-        border-radius: 50px;
-        justify-content: start;
-        align-items: center;
-        .input-data{
-          margin: 8px 0 1px 0;
-          height: 50px;
-          width: 380px;
-          position: relative;
-          top: 20px;
-          font-size: 20px;
-          background-color: white;
-          border: 2px solid white;
-          border-radius: 50px;
-          justify-content: start;
-        }
-        .requir{
-          color:red;
-        }
-      }
-    }
-    .enter{
+    .enter {
       width: 485px;
       height: 45px;
       position: relative;
-      top: 30px;
+      top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .icons {
+        padding: 2px;
+        width: 140px;
+        height: 45px;
+        padding-left: 45px;
+        background-color: white;
+        border-radius: 30px;
+        border: 1px solid white;
+
+        .img {
+          height: 40px;
+          width: auto;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+    .enter1{
+      width: 485px;
+      height: 45px;
+      position: relative;
+      top: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -244,6 +230,7 @@
         padding: 2px;
         width: 140px;
         height: 45px;
+        padding-left: 45px;
         background-color: white;
         border-radius: 30px;
         border: 1px solid white;
@@ -255,12 +242,11 @@
           top: 1px;
         }
       }
-
     }
     .forgot
     {
       position: relative;
-      top: 50px;
+      top: 30px;
     }
     .forgot a
     {
