@@ -1,0 +1,16 @@
+@eatsy 21.03.2024_HostAddress = https://localhost:7222
+@eatsy_21._03._2024_HostAddress = http://localhost:5222
+
+GET {{eatsy_21._03._2024_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{eatsy 21.03.2024_HostAddress}}/api/todoitems
+Content-Type: application/json
+
+{
+  //TodoItemDTO
+}
+
+###
