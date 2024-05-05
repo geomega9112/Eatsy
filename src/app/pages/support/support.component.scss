@@ -1,0 +1,35 @@
+.main
+{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#00522b, #82ecb9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .block
+  {
+    background-color: #016334;
+    width: 600px;
+    height: 300px;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 30px;
+    .back
+    {
+      color: white;
+      position: relative;
+      top: 70px;
+      font-size: 25px;
+      text-decoration: underline;
+      left: 250px;
+    }
+  }
+  .block a
+  {
+    font-size: 30px;
+    color: white;
+  }
+}

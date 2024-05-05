@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  isOpen: boolean = false;
+  selectedOption: string | null = null;
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
+
+  selectOption(option: string) {
+    this.selectedOption = option;
+    this.isOpen = false;
+  }
 
 }
