@@ -24,7 +24,7 @@
         <input formControlName="nickname" class="input-data" type="text" placeholder="Nickname">
         <span *ngIf="loginForm.hasError('required', 'nickname') && loginForm.controls['nickname'].dirty" class="requir">*Nickname is required</span>
       </div>
-      <button (click)="login()" class="log-in">{{isLogin ? 'Log in' : 'Sign Up'}}</button>
+      <button routerLink="/home" (click)="login()" class="log-in">{{isLogin ? 'Log in' : 'Sign Up'}}</button>
     </form>
     <div *ngIf="isLogin" class="enter">
       <button class="icons"><img class="img" src="assets/fb.png"></button>

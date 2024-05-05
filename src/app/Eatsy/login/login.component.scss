@@ -3,7 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .block {
+  height: 100vh;
+  background: linear-gradient(#00522b, #82ecb9);
+  .block{
     margin-top: 30px;
     width: 670px;
     height: 645px;
