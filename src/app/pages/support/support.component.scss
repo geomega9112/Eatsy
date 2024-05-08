@@ -12,10 +12,10 @@
     width: 600px;
     height: 300px;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     padding-top: 50px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 40px;
     border-radius: 30px;
     .back
     {
@@ -27,9 +27,15 @@
       left: 250px;
     }
   }
+  .block h1
+  {
+    font-size: 30px;
+    color: white;
+  }
   .block a
   {
     font-size: 30px;
     color: white;
+    text-decoration: underline;
   }
 }

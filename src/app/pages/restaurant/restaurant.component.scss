@@ -23,8 +23,8 @@
       justify-content: start;
 
       .nav-button {
-        height: 30px;
-        width: 30px;
+        height: 50px;
+        width: 50px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -36,12 +36,12 @@
         }
         .sup
         {
-          height: 30px;
+          height: 35px;
           width: auto;
         }
         .hm
         {
-         width: 40px;
+         width: 45px;
           height: auto;
         }
       }
@@ -80,6 +80,7 @@
       display: flex;
       align-items: center;
       justify-content: start;
+      box-shadow:7px 5px 5px black;
 
       .search {
         position: relative;
@@ -110,25 +111,8 @@
       justify-content: space-between;
       align-items: center;
       position: relative;
+      left: 130px;
       padding: 5px;
-
-      .upgrade {
-        height: 40px;
-        width: 120px;
-        background-color: #016334;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        justify-content: center;
-
-      }
-
-      .upgrade a {
-        color: white;
-        font-size: 20px;
-      }
-
       .user {
         height: 50px;
         width: 50px;
@@ -136,6 +120,7 @@
         border-radius: 30px;
         display: flex;
         justify-content: center;
+        box-shadow:7px 5px 5px black;
         align-items: center;
 
         .us {
