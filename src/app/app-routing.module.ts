@@ -7,6 +7,7 @@ import {ListComponent} from "./pages/list/list.component";
 import {RestaurantComponent} from "./pages/restaurant/restaurant.component";
 import {PopularComponent} from "./pages/popular/popular.component";
 import {SupportComponent} from "./pages/support/support.component";
+import {UserComponent} from "./pages/user/user.component";
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'list', component: ListComponent},
   {path:'restaurant', component: RestaurantComponent},
   {path:'popular', component: PopularComponent},
-  {path:'support', component: SupportComponent}
+  {path:'support', component: SupportComponent},
+  {path:'user', component: UserComponent}
 ];
 
 @NgModule({

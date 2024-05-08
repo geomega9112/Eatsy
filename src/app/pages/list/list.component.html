@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="home">
   <nav class="navbar">
     <img class="logo" src="assets/logo.png">
@@ -5,9 +6,9 @@
       <button class="nav-button"><img class="other" src="assets/time.png"></button>
       <button routerLink="/popular" class="nav-button"><img class="other"src="assets/star.png"></button>
       <button class="nav-button"><img class="other" src="assets/love.png"></button>
-      <button class="nav-button"> <img class="sup" src="assets/support.png"></button>
+      <button routerLink="/support" class="nav-button"> <img class="sup" src="assets/support.png"></button>
     </div>
-    <button routerLink="/login"  class="nav-log"><img class="other" src="assets/log.png"></button>
+    <button routerLink="/login" class="nav-log"><img class="other" src="assets/log.png"></button>
   </nav>
   <div class="content_page">
     <div class="head_menu">
@@ -17,11 +18,9 @@
           <button class="find"><img class="photo" src="assets/find.png"></button>
         </div>
         <div class="container">
-          <span class="upgrade"><a>Upgrade</a></span>
-          <button class="user"><img class="us" src="assets/user.png"></button>
+          <button routerLink="/user" class="user"><img class="us" src="assets/user.png"></button>
         </div>
       </div>
-
       <div class="slide-controls">
         <input type="radio" name="slide" id="map" checked>
         <input routerLink="/home" type="radio" name="slide" id="list">
@@ -160,7 +159,69 @@
           </div>
         </div>
 
-        <div class="col-4">Filters</div>
+        <div class="col-4">
+          <span class="filters">Filters</span>
+          <div class="sort">Sort by
+            <div class="sort-contain">
+              <button class="dist">By distance</button>
+              <button class="dist">By price</button>
+              <button class="dist">By rating</button>
+            </div>
+          </div>
+          <div class="people">Price/people
+            <div class="people-contain">
+              <button class="field"></button>
+              <span class="t">/</span>
+              <button class="field"></button>
+            </div>
+            <mat-slider class="slider" min="0" max="2000" step="100" showTickMarks discrete [displayWith]="formatLabel">
+              <input matSliderThumb>
+            </mat-slider>
+          </div>
+          <div class="rating">Rating
+            <div class="star-container">
+              <button mat-icon-button *ngFor="let ratingId of ratingArr; index as i"
+                      [color]="i < currentRating ? 'primary' : 'accent' "[id]="'star_'+i"
+                      (click)="onClick(i+1)"
+                      [matTooltip]="(ratingId+1).toString()"
+                      matTooltipPosition="above">
+                <mat-icon>{{showIcon(i)}}</mat-icon>
+              </button>
+              <mat-error *ngIf="ratingArr.length == 0">
+                Star count is <strong>required</strong> and cannot be zero
+              </mat-error>
+            </div>
+          </div>
+          <div class="d">Distance
+            <div class="d-contain">
+              <input type="checkbox" id="check" (click)="moveCheckbox('check')" [checked]="selectedCheckbox === 'check'">
+              <label for="check" class="check-t"><1 km</label>
+              <input type="checkbox" id="check1" (click)="moveCheckbox('check1')" [checked]="selectedCheckbox === 'check1'">
+              <label for="check1" class="check-t">1-3 km</label>
+              <input type="checkbox" id="check2" (click)="moveCheckbox('check2')" [checked]="selectedCheckbox === 'check2'">
+              <label for="check2" class="check-t">>3 km</label>
+            </div>
+          </div>
+          <div class="reservation">Seat reservation
+            <div class="r-contain">
+              <input type="checkbox" id="check3" (click)="moveReservationCheckbox('check3')" [checked]="selectedReservationCheckbox === 'check3'">
+              <label for="check3" class="check-r">Yes</label>
+              <input type="checkbox" id="check4" (click)="moveReservationCheckbox('check4')" [checked]="selectedReservationCheckbox === 'check4'">
+              <label for="check4" class="check-r">No</label>
+            </div>
+          </div>
+          <div class="cuisine">Cuisine
+            <div class="field1"><img class="tf" src="assets/find.png"></div>
+          </div>
+          <div class="type">Type of institution
+            <div class="field2">
+              <img class="tf" src="assets/find.png">
+            </div>
+          </div>
+          <div class="sort2">
+            <button class="apply"><a>Apply</a></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

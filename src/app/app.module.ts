@@ -12,6 +12,16 @@ import { ListComponent } from './pages/list/list.component';
 import {RestaurantComponent} from "./pages/restaurant/restaurant.component";
 import { PopularComponent } from './pages/popular/popular.component';
 import { SupportComponent } from './pages/support/support.component';
+import { MatIconModule } from "@angular/material/icon";
+import { MatError } from "@angular/material/form-field";
+import { MatIconButton } from "@angular/material/button";
+import { MatTooltip } from "@angular/material/tooltip";
+import {  MatSidenavModule } from "@angular/material/sidenav";
+import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderThumb } from "@angular/material/slider";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserComponent } from './pages/user/user.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,13 +32,30 @@ import { SupportComponent } from './pages/support/support.component';
     RestaurantComponent,
     PopularComponent,
     SupportComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgOptimizedImage,
     ReactiveFormsModule,
-    LoginComponent
+    LoginComponent,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatError,
+    MatTooltip,
+    MatIconModule,
+    MatIconButton,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderThumb,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
