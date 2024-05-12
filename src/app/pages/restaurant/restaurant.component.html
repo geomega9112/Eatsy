@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="home">
   <nav class="navbar">
     <img routerLink="/home" class="logo" src="assets/logo.png">
@@ -41,11 +42,11 @@
     Yoki - це окремий світ, який приведе тебе від хаосу до порядку та розбудить у тобі справжнього самурая!</a></div>
     <div class="blocks">
       <div class="block1">
-        <a>Теги</a>
+        <a>Tags</a>
         <h1>#sushi #fish #cocktails #music #hookan #center #with_friends #night_vibe</h1>
       </div>
       <div class="block2">
-        <a>Рейтинг</a>
+        <a>Rating</a>
         <img class="star" src="assets/st.png">
       </div>
     </div>
@@ -80,5 +81,187 @@
       <button class="ch"><a>Check</a></button>
     </div>
       <button class="more"><a>More</a></button>
+  </div>
+  <div class="location">
+    <a>Location</a>
+    <div class="line2"></div>
+    <div class="map">
+      <img class="skrin" src="assets/map.png">
+    </div>
+    <div class="info_line">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+        </svg>
+        вулиця Академіка Гнатюка, 12а
+      </div>
+      <div class="route">
+        <button class="check" type="button">Route</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews">
+    <a>Reviews</a>
+    <div class="line2"></div>
+    <div class="row">
+      <div class="col-4">
+        <form action="#">
+          <div class="rating">
+            <div class="star-container">
+              <button mat-icon-button *ngFor="let ratingId of ratingArr; index as i"
+                      [color]="i < currentRating ? 'primary' : 'accent' "[id]="'star_'+i"
+                      (click)="onClick(i+1)"
+                      [matTooltip]="(ratingId+1).toString()"
+                      matTooltipPosition="above">
+                <mat-icon>{{showIcon(i)}}</mat-icon>
+              </button>
+              <mat-error *ngIf="ratingArr.length == 0">
+                Star count is <strong>required</strong> and cannot be zero
+              </mat-error>
+            </div>
+          </div>
+
+          <textarea name="opinion" cols="30" rows="5" placeholder="Type your review..."></textarea>
+          <div class="btn-group">
+            <button type="submit" class="btn submit">Submit</button>
+            <button class="btn cancel" type="reset">Cancel</button>
+          </div>
+        </form>
+        <div class="rate_reviews">
+          <a>Reviews</a>
+          <div class="review">
+            <div class="stars">
+              <input type="number" name="rating" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+            </div>
+            <a href="#">50 reviews</a>
+          </div>
+          <div class="points">
+            <div class="text">
+              <p>Great</p>
+              <p>Very good</p>
+              <p>Not bad</p>
+              <p>Bad</p>
+              <p>Terrible</p>
+            </div>
+            <div class="statistics">
+              <div class="lines mr-4">
+                <div class="line-bar mt-4">
+                  <div class="line" style="max-width: 65%"></div>
+                </div>
+                <div class="line-bar mt-4">
+                  <div class="line"  style="max-width: 15%"></div>
+                </div>
+                <div class="line-bar mt-4">
+                  <div class="line" style="max-width: 35%"></div>
+                </div>
+                <div class="line-bar mt-4">
+                  <div class="line" style="max-width: 95%"></div>
+                </div>
+                <div class="line-bar mt-4">
+                  <div class="line" style="max-width: 45%"></div>
+                </div>
+              </div>
+              <div class="numbers">
+                <p>25</p>
+                <p>7</p>
+                <p>18</p>
+                <p>0</p>
+                <p>0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8" align="center">
+        <div class="review_example">
+          <div class="user_comment">
+            <img src="assets/Ostap.jpg">
+            <div class="stars">
+              <input type="number" name="rating" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+          </div>
+          <hr>
+          "Я просто захоплений від візиту в ресторан Yoki! Вражаюча атмосфера, де відчувається приємна теплота і гостинність. Смакота, яку я пробував там, просто перевершила мої очікування! Їжа була неймовірно смачною і стильно поданою. Обслуговування на вищому рівні, персонал був дуже уважним і привітним. Я безперечно рекомендую ресторан Yoki всім, хто цінує смачну їжу, затишну атмосферу та високий рівень обслуговування!"
+        </div>
+        <div class="review_example">
+          <div class="user_comment">
+            <img src="assets/Danylo.jpg">
+            <div class="stars">
+              <input type="number" name="rating" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+          </div>
+          <hr>
+          "Я просто захоплений від візиту в ресторан Yoki! Вражаюча атмосфера, де відчувається приємна теплота і гостинність. Смакота, яку я пробував там, просто перевершила мої очікування! Їжа була неймовірно смачною і стильно поданою. Обслуговування на вищому рівні, персонал був дуже уважним і привітним. Я безперечно рекомендую ресторан Yoki всім, хто цінує смачну їжу, затишну атмосферу та високий рівень обслуговування!"
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contacts">
+    <a>Contacts</a>
+    <hr>
+    <div class="contact">
+      <div class="phone-num">
+        <p>+380987654321</p>
+        <p>+380987654321</p>
+        <p>+380987654321</p>
+      </div>
+      <div class="soc-data">
+        <p>restguestgmail.com</p>
+        <div class="media">
+          <a href="#" class="telegram"><img class="image" src="assets/telegram.png"></a>
+          <a href="#" class="facebook"><img class="image" src="assets/facebook.png"></a>
+          <a href="#" class="instagram"><img class="image" src="assets/instagram.png"></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

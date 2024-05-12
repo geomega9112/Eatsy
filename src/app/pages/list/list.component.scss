@@ -42,6 +42,10 @@
         }
       }
     }
+    .nav-log
+    {
+      margin-top: 70px;
+    }
     .logo
     {
       position: relative;
@@ -65,6 +69,9 @@
     .head_menu{
       width: calc(100% - 90px);
       height: 100px;
+      position: fixed;
+      z-index: 999;
+      margin-bottom: 70px;
       .menu{
         position: relative;
         height: 60px;
@@ -115,22 +122,6 @@
           width: 180px;
           justify-content: space-between;
           padding: 5px;
-          .upgrade {
-            height: 40px;
-            width: 120px;
-            background-color: #016334;
-            border-radius: 30px;
-            display: flex;
-            box-shadow:7px 5px 5px black;
-            align-items: center;
-            position: relative;
-            justify-content: center;
-
-          }
-          .upgrade a {
-            color: white;
-            font-size: 20px;
-          }
           .user {
             height: 50px;
             width: 50px;
@@ -139,7 +130,7 @@
             display: flex;
             position: relative;
             box-shadow:7px 5px 5px black;
-            left: 120px;
+            left: 30px;
             justify-content: center;
             align-items: center;
             .us {
@@ -215,6 +206,7 @@
     .establishment{
       position: relative;
       margin: 30px 20px 20px 20px;
+      top: 100px;
       .row{
         position: relative;
         display:flex;
@@ -223,7 +215,7 @@
           width: 800px;
           height: auto;
           position: relative;
-          left: 100px;
+          left: 150px;
 
           .restaurants_title{
             width: 800px;
@@ -362,6 +354,21 @@
               display: flex;
               flex-direction: row;
               justify-content: space-evenly;
+              .number{
+                display: flex;
+                position: relative;
+                top: 79px;
+              }
+              .number a
+              {
+                position: relative;
+                right: 230px;
+              }
+              .number h1
+              {
+                position: relative;
+                right: 6px;
+              }
 
               .field {
                 width: 110px;

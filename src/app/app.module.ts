@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
@@ -55,7 +55,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSliderThumb,
-    FontAwesomeModule
+    FontAwesomeModule,
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'YOUR_API_KEY'})
   ],
   providers: [],
   bootstrap: [AppComponent]
