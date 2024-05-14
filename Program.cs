@@ -1,6 +1,8 @@
 using Context.Data;
 using eatsy_21._03._2024.Models;
-using Microsoft.EntityFrameworkCore; //
+using Microsoft.EntityFrameworkCore;
+using eatsy_21._03._2024.Services;
+using eatsy_21._03._2024.Services.Interface;//
 //
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +22,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 
 var app = builder.Build();
 
@@ -88,8 +91,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+name: "default",
+pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllers();
 

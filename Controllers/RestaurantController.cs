@@ -1,31 +1,63 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Web.Http;
-using TodoApi.Servises.Interface;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
-using System.Text.Json.Nodes;
+using eatsy_21._03._2024.Services.Interface;
+using eatsy_21._03._2024.Models;
+using Microsoft.EntityFrameworkCore;
+using eatsy_21._03._2024.Services;
+using Context.Data;
 
-namespace TodoApi.Controllers
+namespace eatsy_21._03._2024.Controllers
 {
-    public class RestaurantController : ControllerBase
-    {
-        private readonly IRestaurantService _restaurantService;
+	[Route("api/")]
+	[ApiController]
+	public class RestaurantController : ControllerBase
+	{
+		private readonly DbContext _dbContext;
+		private readonly IRestaurantService _restaurantService;
 
-        public RestaurantController(IRestaurantService restaurantService)
-        {
-            _restaurantService = restaurantService;
-        }
+		public RestaurantController(IRestaurantService restaurantService)
+		{
+			_restaurantService = restaurantService;
+		}
 
-        [HttpGet]
-        public async Task<IHttpActionResult> GetRestaurnts()
-        {
-            var data = _restaurantService.GetRestaurants();
-            return (IHttpActionResult)Ok(data); 
-            //return JsonResult(data);
-        }
+		[HttpGet]
+		[Route("GetRestaurants")]
+		public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetRestaurants()
+		{
+			var data = await _restaurantService.GetItems();
+			return Ok(data);
+		}
 
-    }
+		[HttpGet]
+		[Route("GetRestaurant")]
+		public async Task<ActionResult<RestaurantDTO>> GetRestaurant(int id)
+		{
+			try
+			{
+				var restaurant = await this._restaurantService.GetItem(id);
+				return restaurant == null ? BadRequest() : Ok(restaurant);
+
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+								"Error retrieving data from the database");
+			}
+		}
+
+		[HttpPost("Filter")]
+		public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetFilteredRestaurants([FromBody] RestaurantFilterDTO filterDto)
+		{
+			try
+			{
+				var filteredRestaurants = await _restaurantService.GetFilteredRestaurants(filterDto);
+				return filteredRestaurants == null ? BadRequest() : Ok(filteredRestaurants);
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+								"Error retrieving data from the database");
+			}
+		}
+
+	}
 }
