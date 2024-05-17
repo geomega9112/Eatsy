@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-list',
@@ -15,8 +17,13 @@ export class ListComponent implements OnInit {
   @Output() private ratingUpdated = new EventEmitter<number>();  // Emits the selected rating
 
   public ratingArr: number[] = [];  // Array to hold the stars for ngFor
+  public restaurants: any[] = [
 
-  constructor(private snackBar: MatSnackBar) { }
+  ];
+
+  constructor(private snackBar: MatSnackBar, private httpClient: HttpClient) {
+
+  }
   selectedCheckbox: string | null = null;
   selectedReservationCheckbox: string | null = null;
 
@@ -30,6 +37,34 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.initializeStars();
+    this.httpClient.get("https://localhost:7009/api/GetRestaurants")
+      .subscribe(
+        res => {
+          console.log('HTTP response', res)
+          this.restaurants = [
+            {
+              name: "YOKI Restaurant",
+              address: "вулиця Академіка Гнатюка, 12а",
+              img: "assets/yoki.png"
+            },
+            {
+              name: "Піцерія 'Італійська смакота'",
+              address: "вулиця Академіка Гнатюка, 12а",
+              img: "assets/yoki.png"
+            },
+            {
+              name: "YOKI Restaurant",
+              address: "вулиця Академіка Гнатюка, 12а",
+              img: "/assets/yoki.png"
+            },
+            {
+              name: "YOKI Restaurant",
+              address: "вулиця Академіка Гнатюка, 12а",
+              img: "assets/yoki.png"
+            }
+          ]
+        },
+        err => console.log('HTTP Error', err),);
   }
 
   // Initializes the stars based on starCount

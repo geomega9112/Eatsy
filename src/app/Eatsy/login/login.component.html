@@ -11,12 +11,23 @@
         <div class="slider-tab"></div>
       </div>
     </div>
-    <form [formGroup]="loginForm" class="container">
+    <form *ngIf="isLogin" [formGroup]="loginForm" class="container">
       <div class="data">
         <input formControlName="email" class="input-data" type="text" placeholder="Email">
         <span *ngIf="loginForm.hasError('required', 'email') && loginForm.controls['email'].dirty" class="requir">*Email is required</span>
       </div>
       <div class="data1">
+        <input formControlName="password" class="input-data" type="text" placeholder="Password">
+        <span *ngIf="loginForm.hasError('required', 'password') && loginForm.controls['password'].dirty" class="requir">*Password is required</span>
+      </div>
+      <button routerLink="/home" (click)="login()" class="log-in">{{isLogin ? 'Log in' : 'Sign Up'}}</button>
+    </form>
+    <form *ngIf="!isLogin" [formGroup]="loginForm" class="container">
+      <div class="data3">
+        <input formControlName="email" class="input-data" type="text" placeholder="Email">
+        <span *ngIf="loginForm.hasError('required', 'email') && loginForm.controls['email'].dirty" class="requir">*Email is required</span>
+      </div>
+      <div class="data4">
         <input formControlName="password" class="input-data" type="text" placeholder="Password">
         <span *ngIf="loginForm.hasError('required', 'password') && loginForm.controls['password'].dirty" class="requir">*Password is required</span>
       </div>

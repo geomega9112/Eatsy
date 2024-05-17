@@ -103,6 +103,57 @@
       width: 390px;
       justify-content: start;
       padding-top: 20px;
+      .data3{
+        position: relative;
+        padding: 10px 0;
+        border-radius: 50px;
+        justify-content: start;
+        align-items: center;
+        .input-data{
+          padding-left: 20px;
+          height: 40px;
+          width: 380px;
+          position: relative;
+          font-size: 20px;
+          background-color: white;
+          border: 2px solid white;
+          border-radius: 50px;
+          justify-content: start;
+        }
+        .requir{
+          color:red;
+          position: absolute;
+          display: inline-block;
+          right: 30px;
+          line-height: 40px;
+        }
+      }
+      .data4
+      {
+        position: relative;
+        padding: 15px 0;
+        border-radius: 50px;
+        justify-content: start;
+        align-items: center;
+        .input-data{
+          padding-left: 20px;
+          height: 40px;
+          width: 380px;
+          position: relative;
+          font-size: 20px;
+          background-color: white;
+          border: 2px solid white;
+          border-radius: 50px;
+          justify-content: start;
+        }
+        .requir{
+          color:red;
+          position: absolute;
+          display: inline-block;
+          right: 30px;
+          line-height: 40px;
+        }
+      }
       .data{
         position: relative;
         padding: 10px 0;
