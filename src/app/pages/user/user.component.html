@@ -8,7 +8,7 @@
       <button class="nav-button"><img class="other" src="assets/love.png"></button>
       <button routerLink="/support" class="nav-button"> <img class="sup" src="assets/support.png"></button>
     </div>
-    <button class="nav-log"><img class="other" src="assets/log.png"></button>
+    <button routerLink="/login" class="nav-log"><img class="other" src="assets/log.png"></button>
   </nav>
   <div class="page-container">
     <div class="head-menu">
@@ -29,22 +29,27 @@
       </div>
     </div>
     <div class="user-top">
-      <div class="user-info">
+      <div class="user-info" [formGroup]="userForm">
         <div class="photo-name">
           <div class="photo">
-            <img class="ava" src="assets/avatar.png">
+            <img class="ava" src="../../../assets/avatar.png">
           </div>
           <div class="info">
-            <div class="name" lang="uk">Михасик</div>
-            <div class="email">misha2003&commat;gmail.com</div>
+            <div class="name">
+              <input formControlName="name" [readonly]="!isEditMode" />
+            </div>
+            <div class="email">
+              <input formControlName="email" [readonly]="!isEditMode" />
+            </div>
             <div class="city">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
               </svg>Lviv
+              <!--                   <input formControlName="city" [readonly]="!isEditMode" />-->
             </div>
           </div>
         </div>
-        <button class="edit">Edit</button>
+        <button class="edit" (click)="toggleEditMode()">{{isEditMode ? 'Save' : 'Edit'}}</button>
       </div>
     </div>
     <div class="review">

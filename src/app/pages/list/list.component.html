@@ -42,58 +42,58 @@
               </a>
             </div>
           </div>
-          <div class="block_row_restaurants">
-            <img src="assets/yoki.png">
+          <div *ngFor="let restaurant of restaurants" class="block_row_restaurants">
+            <img src="{{restaurant.img}}">
             <div class="information">
-              <p class="headline_restaurant">YOKI Restaurant</p>
+              <p class="headline_restaurant">{{restaurant.name}}</p>
               <div class="info_line">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                 </svg>
-                вулиця Академіка Гнатюка, 12а
+                {{restaurant.address}}
               </div>
             </div>
             <button routerLink="/restaurant" class="check">Check</button>
           </div>
-          <div class="block_row_restaurants">
-            <img src="assets/yoki.png">
-            <div class="information">
-              <p class="headline_restaurant">YOKI Restaurant</p>
-              <div class="info_line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                </svg>
-                вулиця Академіка Гнатюка, 12а
-              </div>
-            </div>
-            <button routerLink="/restaurant" class="check">Check</button>
-          </div>
-          <div class="block_row_restaurants">
-            <img src="assets/yoki.png">
-            <div class="information">
-              <p class="headline_restaurant">YOKI Restaurant</p>
-              <div class="info_line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                </svg>
-                вулиця Академіка Гнатюка, 12а
-              </div>
-            </div>
-            <button routerLink="/restaurant" class="check">Check</button>
-          </div>
-          <div class="block_row_restaurants">
-            <img src="assets/yoki.png">
-            <div class="information">
-              <p class="headline_restaurant">YOKI Restaurant</p>
-              <div class="info_line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                </svg>
-                вулиця Академіка Гнатюка, 12а
-              </div>
-            </div>
-            <button routerLink="/restaurant" class="check">Check</button>
-          </div>
+<!--          <div class="block_row_restaurants">-->
+<!--            <img src="assets/yoki.png">-->
+<!--            <div class="information">-->
+<!--              <p class="headline_restaurant">YOKI Restaurant</p>-->
+<!--              <div class="info_line">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">-->
+<!--                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>-->
+<!--                </svg>-->
+<!--                вулиця Академіка Гнатюка, 12а-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button routerLink="/restaurant" class="check">Check</button>-->
+<!--          </div>-->
+<!--          <div class="block_row_restaurants">-->
+<!--            <img src="assets/yoki.png">-->
+<!--            <div class="information">-->
+<!--              <p class="headline_restaurant">YOKI Restaurant</p>-->
+<!--              <div class="info_line">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">-->
+<!--                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>-->
+<!--                </svg>-->
+<!--                вулиця Академіка Гнатюка, 12а-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button routerLink="/restaurant" class="check">Check</button>-->
+<!--          </div>-->
+<!--          <div class="block_row_restaurants">-->
+<!--            <img src="assets/yoki.png">-->
+<!--            <div class="information">-->
+<!--              <p class="headline_restaurant">YOKI Restaurant</p>-->
+<!--              <div class="info_line">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">-->
+<!--                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>-->
+<!--                </svg>-->
+<!--                вулиця Академіка Гнатюка, 12а-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button routerLink="/restaurant" class="check">Check</button>-->
+<!--          </div>-->
 
           <div class="row">
             <div class="restaurants_title">

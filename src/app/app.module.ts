@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import { ForgotPasswordComponent } from './Eatsy/forgot-password/forgot-password.component';
@@ -17,11 +18,14 @@ import { MatError } from "@angular/material/form-field";
 import { MatIconButton } from "@angular/material/button";
 import { MatTooltip } from "@angular/material/tooltip";
 import {  MatSidenavModule } from "@angular/material/sidenav";
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 import {MatSliderModule} from '@angular/material/slider';
 import { MatSliderThumb } from "@angular/material/slider";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserComponent } from './pages/user/user.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +37,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PopularComponent,
     SupportComponent,
     UserComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgOptimizedImage,
     ReactiveFormsModule,
     LoginComponent,
@@ -56,6 +62,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserAnimationsModule,
     MatSliderThumb,
     FontAwesomeModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false })
     // AgmCoreModule.forRoot({
     //   apiKey: 'YOUR_API_KEY'})
   ],
